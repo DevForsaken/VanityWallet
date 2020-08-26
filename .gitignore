@@ -1,0 +1,8 @@
+/.git/
+/bin/
+**/found/
+/found/
+**/.settings/
+/.settings/
+*.classpath
+*.project
