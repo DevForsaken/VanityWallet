@@ -1,9 +1,11 @@
-# VanityWallet
+# VanityWallet v0.1.0
 This java application will generate keys for a bitcoin wallet and search for a desired wallet address. If you have found a vanity address with this tool feel free to donate some bitcoin with your new address! 12nnswN71e9L**Qnasty**TrE4j1QWXguhTvuv
 
-### Download: http://www.mediafire.com/file/dgr29jogmvevnnq/file
-    SHA256: 4C688ACDD49A42532F95218105A2BE3B7FA3B4771A022955D35FE166D60A4FDC
-    SHA1: 1432D00B675711C9D20B03537B081FBD013A0FC6
+### Download: http://www.mediafire.com/file/byoe98n9qutltyf/file
+	CRC32: B86CF101
+	CRC64: 087408383381A9C1
+    SHA256: F3F74E38E64A5A0213B386D7DCE59F7BC42F2FD84FA55122CAD3015E6EFE4083
+    SHA1: F8A19921AD80262ED73F04E73190FB3002136801
 
 1. When getting started you should put the jar in its own folder and run using the terminal or command line. 
 1. To add your own name or names to be found locate the file "names.dat" located in the "data" folder.
