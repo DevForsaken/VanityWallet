@@ -11,8 +11,8 @@ This java application will generate keys for a bitcoin wallet and search for a d
     * If only searching for one name just put that name in the file.
 	* Names can be search by addresses beginning with or ending with the name.
 	* Names can also be searched by matching case.
-	* Matching = m | Starts with = s | Ends with = ending
-	* Valids uses: name:m,test:s,example:e,also:ms(match and starts),last:me(match and ends)
+	* Matching = m | Starts with = s | Ends with = e
+	* Valids uses: name:m | test:s | example:e | also:ms(match and starts) | last:me(match and ends)
 1. When the application discovers a valid wallet address it will save the Private Key, Public Key, Wallet Address in a file in the found directory.
 
 ## **Dependencies**
