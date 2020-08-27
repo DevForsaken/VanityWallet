@@ -11,7 +11,7 @@ public class VanityWallet {
 	public static CsvHandler csvHandle;
 	
 	public static void main(String[] args) {
-        System.out.println("Starting " + APP_NAME + " " + VERSION + "!\nBitcoin Vanity Address Bruteforcer!"); 
+        System.out.println("Starting " + APP_NAME + " " + VERSION + "!\nBitcoin Vanity Address Generator!"); 
         csvHandle = new CsvHandler("Name Importer");
         TaskHandler taskHandle = new TaskHandler();
         taskHandle.start();

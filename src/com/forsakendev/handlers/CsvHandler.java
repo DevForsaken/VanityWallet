@@ -23,13 +23,6 @@ public class CsvHandler {
 		if(TaskHandler.running) {
 			String dirLoc = dir + "names.dat";
 			File file= new File(dirLoc);
-			
-			if(!file.exists())
-				try {
-					file.mkdir();
-					file.createNewFile();
-				} catch(Exception e) {}
-			
 			Scanner inputStream;
 			
 			try {
