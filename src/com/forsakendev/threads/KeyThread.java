@@ -105,8 +105,10 @@ public class KeyThread extends Thread{
 				/** Final Bitcoin Wallet Address **/
 				String walletStr = Base58.encode(walletBytes);
 				
+				itr += 1;
+				
 				/** If a Valid Key Pair was Found and Contains Name in Vanity List Save Them **/
-				if(searchNames(walletStr.toLowerCase())) {
+				if(searchNames(walletStr)) {
 					/** Decodes PK into Bytes and then Double Sha256 Hashes Them **/
 					byte[] prvt = Hex.decode(privateKeyStr);
 			        byte[] digest = sha.digest(sha.digest(prvt));
@@ -127,7 +129,6 @@ public class KeyThread extends Thread{
 					System.out.println("Bitcoin Address: " + Base58.encode(walletBytes));
 					System.out.println("------------------------");
 				}
-				itr += 1;
 			}
 			catch (Exception e) {
 				errors += 1;
@@ -161,10 +162,36 @@ public class KeyThread extends Thread{
 	}
 	
 	private boolean searchNames(String str) {
-		for(String name: nameArray) {
-			if(str.contains(name.toLowerCase()))
-				return true;
-		}
+			for(String name: nameArray) {
+				if(name.contains(":")) {
+					String[] temp = name.split(":");
+					
+					if(temp[1].toLowerCase().contains("s")) {
+						if(temp[1].toLowerCase().contains("m")) {
+							if(str.startsWith("1" + temp[0]))
+								return true;
+						} else
+							if(str.toLowerCase().startsWith("1" + temp[0]))
+								return true;
+					}
+					if(temp[1].toLowerCase().contains("e")) {
+						if(temp[1].toLowerCase().contains("m")) {
+							if(str.endsWith(temp[0]))
+								return true;
+						} else
+							if(str.toLowerCase().endsWith(temp[0]))
+								return true;
+					} else
+					if(temp[1].toLowerCase().contains("m") && temp[1].toLowerCase().contains("s") == false) {
+						if(str.contains(temp[0]))
+							return true;
+					} else
+						if(str.toLowerCase().contains(name.toLowerCase()))
+							return true;
+				} else
+					if(str.toLowerCase().contains(name.toLowerCase()))
+						return true;
+			}
 		return false;
 	}
 	

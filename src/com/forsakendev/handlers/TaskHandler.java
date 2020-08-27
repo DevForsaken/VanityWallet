@@ -77,7 +77,6 @@ public class TaskHandler {
 		    	line = in.readLine();
 			    if(Pattern.matches("[0-9]+", line)) {
 			    	valid = true;
-			    	System.out.println("line: " + line);
 			    	threads = Integer.parseInt(line);
 			    } else
 			    	System.out.println("Please enter a valid number!");

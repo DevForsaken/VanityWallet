@@ -22,7 +22,6 @@ public class QuitThread extends Thread{
 		    }
 		    catch(Exception e) {}
 		}
-		
 	}
 
 	public void start () {
